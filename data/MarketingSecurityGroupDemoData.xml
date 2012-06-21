@@ -20,13 +20,6 @@ under the License.
 
 <entity-engine-xml>
     <!-- Marketing Manager security -->
-    <SecurityPermission description="View operations in the Marketing Manager." permissionId="MARKETING_VIEW"/>
-    <SecurityPermission description="Create operations in the Marketing Manager." permissionId="MARKETING_CREATE"/>
-    <SecurityPermission description="Update operations in the Marketing Manager." permissionId="MARKETING_UPDATE"/>
-    <SecurityPermission description="Delete operations in the Marketing Manager." permissionId="MARKETING_DELETE"/>
-    <SecurityPermission description="ALL operations in the Marketing Manager." permissionId="MARKETING_ADMIN"/>
-    <SecurityPermission description="Limited view operations in the Marketing Manager." permissionId="MARKETING_ROLE_VIEW"/>
-    <SecurityPermission description="Limited update operations in the Marketing Manager." permissionId="MARKETING_ROLE_UPDATE"/>
     <SecurityGroupPermission groupId="FULLADMIN" permissionId="MARKETING_ADMIN"/>
     <SecurityGroupPermission groupId="FLEXADMIN" permissionId="MARKETING_CREATE"/>
     <SecurityGroupPermission groupId="FLEXADMIN" permissionId="MARKETING_DELETE"/>
@@ -36,13 +29,6 @@ under the License.
     <SecurityGroupPermission groupId="BIZADMIN" permissionId="MARKETING_ADMIN"/>
 
     <!-- SFA security -->
-    <SecurityPermission description="View operations in the SFA Manager." permissionId="SFA_VIEW"/>
-    <SecurityPermission description="Create operations in the SFA Manager." permissionId="SFA_CREATE"/>
-    <SecurityPermission description="Update operations in the SFA Manager." permissionId="SFA_UPDATE"/>
-    <SecurityPermission description="Delete operations in the SFA Manager." permissionId="SFA_DELETE"/>
-    <SecurityPermission description="ALL operations in the SFA Manager." permissionId="SFA_ADMIN"/>
-    <SecurityPermission description="Limited view operations in the SFA Manager." permissionId="SFA_ROLE_VIEW"/>
-    <SecurityPermission description="Limited update operations in the SFA Manager." permissionId="SFA_ROLE_UPDATE"/>
     <SecurityGroupPermission groupId="FULLADMIN" permissionId="SFA_ADMIN"/>
     <SecurityGroupPermission groupId="FLEXADMIN" permissionId="SFA_CREATE"/>
     <SecurityGroupPermission groupId="FLEXADMIN" permissionId="SFA_DELETE"/>
@@ -50,6 +36,5 @@ under the License.
     <SecurityGroupPermission groupId="FLEXADMIN" permissionId="SFA_VIEW"/>
     <SecurityGroupPermission groupId="VIEWADMIN" permissionId="SFA_VIEW"/>
     <SecurityGroupPermission groupId="BIZADMIN" permissionId="SFA_ADMIN"/>
-    
     
 </entity-engine-xml>
