@@ -21,7 +21,7 @@
     xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/simple-methods.xsd">
     <simple-method method-name="createAccount"  short-description="create Account Group">
         <set field="parameters.roleTypeId" value="ACCOUNT"/>
-        <call-simple-method method-name="createPartyGroupRoleAndContactMechs" xml-resource="component://party/script/org/ofbiz/party/party/PartySimpleMethods.xml"/>
+        <call-simple-method method-name="createPartyGroupRoleAndContactMechs" xml-resource="component://party/minilang/party/PartySimpleMethods.xml"/>
         <field-to-result field="partyId"/>
         <set field="ensurePartyRoleCtx.partyId" from-field="userLogin.partyId"/>
         <set field="ensurePartyRoleCtx.roleTypeId" value="OWNER"/>

@@ -53,7 +53,7 @@
             </condition>
             <then>
                 <set field="parameters.roleTypeId" value="LEAD"/>
-                <call-simple-method method-name="createPersonRoleAndContactMechs" xml-resource="component://party/script/org/ofbiz/party/party/PartySimpleMethods.xml"/>
+                <call-simple-method method-name="createPersonRoleAndContactMechs" xml-resource="component://party/minilang/party/PartySimpleMethods.xml"/>
                 <check-errors/>
                 
                 <set field="leadContactPartyId" from-field="partyId"/>
@@ -77,7 +77,7 @@
             <set field="parameters.roleTypeId" value="ACCOUNT_LEAD"/>
             <if-empty field="leadContactPartyId">
                 <!-- In case we have any contact mech data then associate with party group  -->
-                <call-simple-method method-name="createPartyGroupRoleAndContactMechs" xml-resource="component://party/script/org/ofbiz/party/party/PartySimpleMethods.xml"/>
+                <call-simple-method method-name="createPartyGroupRoleAndContactMechs" xml-resource="component://party/minilang/party/PartySimpleMethods.xml"/>
                 <set field="partyGroupPartyId" from-field="partyId"/>
                 <clear-field field="partyId"/>
          
@@ -87,7 +87,7 @@
 
                 <else>
                     <call-map-processor processor-name="partyGroup" in-map-name="parameters" out-map-name="partyGroupCtx"
-                        xml-resource="component://party/script/org/ofbiz/party/party/PartyMapProcs.xml"/>
+                        xml-resource="component://party/minilang/party/PartyMapProcs.xml"/>
                     <call-service service-name="createPartyGroup" in-map-name="partyGroupCtx">
                         <result-to-field result-name="partyId" field="partyGroupPartyId"/>
                     </call-service>
